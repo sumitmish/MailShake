@@ -39,7 +39,7 @@ describe('Test Side Navigation Links for ', ()=> {
         })    
     })
 
-    it('Click Prospects then find Unsubscribes object and click it', ()=> {
+    it('Click Prospects object then find Unsubscribes and click it', ()=> {
         homePage.getProspects().click()  
         cy.get(".mat-list-item > .mat-list-item-content").each(($el,index,$list)=> {
             const objName = $el.text()
@@ -202,7 +202,7 @@ describe('Test Side Navigation Links for ', ()=> {
     })
 
     it('Click Integrations object then find Conversion Tracking and click it', ()=> {
-        homePage.getReports().click() 
+        homePage.getIntegrations().click() 
         cy.get(".mat-list-item > .mat-list-item-content").each(($el,index,$list)=> {
             const objName = $el.text()
             if(objName.includes('Conversion Tracking')){
