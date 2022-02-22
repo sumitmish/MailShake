@@ -1,5 +1,9 @@
 class HomePage {
 
+    getLogo(){
+        return cy.get('.side-brand')
+    }
+
     getBtn(){
         return cy.get('.mat-button-wrapper')
     }
