@@ -2,11 +2,9 @@
 import HomePage from '../support/PageObjects/HomePage'
 import { wrap } from 'module'
 
-const homePage = new HomePage()
-
-
 describe('Test Side Navigation Links for ', ()=> {
-    
+    const homePage = new HomePage()
+    //globally preserve session id 
     Cypress.Cookies.defaults({
         preserve: 'sessionID'
     })
@@ -18,7 +16,7 @@ describe('Test Side Navigation Links for ', ()=> {
         // reset each test case to homepage
         homePage.getLogo().click()
         // verify Dashboard page by verifying "recent campaigns" button is visible 
-        cy.get('.cdk-column-title > strong').should('be.visible')
+        homePage.getRecentCampaignsBtn().should('be.visible')
     })
 
     it('Find Prospects object and click it', ()=> {  

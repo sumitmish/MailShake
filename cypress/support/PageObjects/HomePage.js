@@ -7,6 +7,10 @@ class HomePage {
     getBtn(){
         return cy.get('.mat-button-wrapper')
     }
+
+    getRecentCampaignsBtn() {
+        return cy.get('.cdk-column-title > strong')
+    }
     
     getDashboard(){
         return cy.get(":nth-child(1) > .mat-list-item > .mat-list-item-content > .mat-badge")

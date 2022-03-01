@@ -46,5 +46,5 @@ Cypress.Commands.add('login', ()=>{
     cy.get('#mat-input-0').type('leslieknope@mailinator.com')
     cy.get('#mat-input-1').type("'F'-\\(3S@e9^(w=/*PM@")
         homePage.getBtn().contains(' Log In ').click()
-        cy.wait(2000)
+        cy.wait(3000)
 })
